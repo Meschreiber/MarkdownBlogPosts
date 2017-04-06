@@ -53,13 +53,21 @@ Insert awesome example here:
 
 
 
+
+
 Stuff I still need to clarify for myself:
 =========================================
 
-#### I either don't understand this paragraph or disagree with it:  Even though it is called a HasOne association, for most 1:1 relations you usually want the BelongsTo association since BelongsTo will add the foreignKey on the source where hasOne will add on the target. 
+#### I either don't understand this paragraph from the docs or disagree with it: 
+
+```
+Even though it is called a HasOne association, for most 1:1 relations you usually want the BelongsTo association since BelongsTo will add the foreignKey on the source where hasOne will add on the target. 
+```
 
 #### Why add the `Game.belongsTo(Team);` at the end?
 ```
+// Example from Sequelize docs:
+
 Project.hasOne(User, { as: 'Initiator' })
 // Now you will get Project#getInitiator and Project#setInitiator
 
@@ -67,7 +75,7 @@ Project.hasOne(User, { as: 'Initiator' })
 // If you need to join a table twice you can double join the same table
 Team.hasOne(Game, {as: 'HomeTeam', foreignKey : 'homeTeamId'});  
 //My note: Game will get a homeTeamId as a foreign key and Team(?) will now have 'getHomeTeam' 'setHomeTeam' methods?
-Team.hasOne(Game, {as: 'AwayTeam', foreignKey : 'awayTeamId'});  //My note: Game will have a 
+Team.hasOne(Game, {as: 'AwayTeam', foreignKey : 'awayTeamId'});   
 //My note: Game will get a awayTeamId as a foreign key and Team(?) will now have 'getAwayTeam' 'setAwayTeam' methods?
 Game.belongsTo(Team);
 
