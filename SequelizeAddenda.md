@@ -183,11 +183,4 @@ Person.hasOne(Person, {as: 'Father', foreignKey: 'DadId'})
 Person#setFather
 Person#getFather
 ```
-
-
-
-
-
-
-
-
+Eventually use this: http://markdowntomedium.com/
