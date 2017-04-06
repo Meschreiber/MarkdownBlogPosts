@@ -145,9 +145,9 @@ Stuff I still need to clarify for myself:
 
 ##### I either don't understand this paragraph from the docs or disagree with it: 
 
-```
-Even though it is called a HasOne association, for most 1:1 relations you usually want the BelongsTo association since BelongsTo will add the foreignKey on the source where hasOne will add on the target. 
-```
+
+> Even though it is called a HasOne association, for most 1:1 relations you usually want the BelongsTo association since BelongsTo will add the foreignKey on the source where hasOne will add on the target. 
+
 
 ##### Why add the `Game.belongsTo(Team);` at the end?
 ```
